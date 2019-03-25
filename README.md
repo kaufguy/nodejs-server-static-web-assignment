@@ -10,10 +10,25 @@ The recommender static web is at http://localhost:3000/ and API access is throug
 npm install
 ```
 
-## Run
+## Run Dev
 
 ```bash
-npm run start
+npm run start-dev 
+(server runs on http://localhost:3000/ and client on http://localhost:3500/)
+Go To http://localhost:3500/
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+## Run Prod
+
+```bash
+npm run start-prod 
+(server runs on http://localhost:3000/ and serves static build files)
 Go To http://localhost:3000/
 ```
 
