@@ -87,7 +87,7 @@ export default class StockView {
             }
         }
         div.innerHTML =
-               `<input type="text" id="stock-item-value-${stock.id}" value="${stock.value}"/>
+               `<input type="number" id="stock-item-value-${stock.id}" value="${stock.value}"/>
                 <input id="stock-item-date-${stock.id}" type="datetime-local" value="${stock.date.toISOString().slice(0, -1)}"/>
                 <input type="button" id="delete-stock-button-${stock.id}" value="Delete Stock">`
         return div;
