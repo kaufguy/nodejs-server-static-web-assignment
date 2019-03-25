@@ -1,0 +1,92 @@
+#edit-view{
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    flex-grow: 1;
+}
+
+#start-view{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    flex-grow: 1;
+}
+
+#add-stock-button{
+    margin: 20px;
+}
+
+#stock-form {
+    margin: 0;
+}
+
+#stock-container{
+    border: solid 0.1px;
+    padding: 10px;
+}
+
+
+.app-container{
+    display: flex;
+    overflow: auto;
+    height: 100%;
+}
+
+.add-multiple-stock{
+    margin: 40px;
+}
+
+.add-multiple-stock-text{
+    z-index: 2;
+    position: relative;
+    pointer-events: none;
+}
+
+#start-items-number{
+    margin-right: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+#start-fill-items-button {
+    position: relative;
+    width: 320px;
+    height: 75px;
+    margin: -46px 0;
+    background: coral;
+    border-radius: 50% / 10%;
+    color: white;
+    text-align: center;
+    text-indent: 0.1em;
+    z-index: 1;
+    cursor: pointer;
+}
+#start-fill-items-button:before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    right: -5%;
+    left: -5%;
+    background: inherit;
+    border-radius: 5% / 50%;
+}
+
+.buy-stock{
+    border: solid 2px green;
+}
+
+.sell-stock{
+    border: solid 2px red;
+}
+
+.stock-item {
+    padding: 3px;
+}
+
+#recommendation-container{
+    margin: 10px;
+}

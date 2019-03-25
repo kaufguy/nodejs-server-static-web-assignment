@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>WebNots - Static Page Example</title>
+    <link type="text/css" rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="app-container">
+    <div id="start-view">
+        <h1>Stock Recommender</h1>
+        <div class="add-multiple-stock">
+            <div id="start-fill-items-button"></div>
+            <input type="number" id="start-items-number" placeholder="Number of lines">
+            <span class="add-multiple-stock-text">Add Multiple Stock Lines</span>
+        </div>
+    </div>
+    <div id="edit-view">
+        <div class="add-stock">
+            <input type="button" id="add-stock-button" value="Add 1 Stock Line">
+        </div>
+
+
+        <div id="stock-container">
+            <form id="stock-form">
+
+            </form>
+        </div>
+        <div id="recommendation-container" />
+    </div>
+</div>
+
+<script type="module" src="js/App.js"></script>
+</body>
+</html>
