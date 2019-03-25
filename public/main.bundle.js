@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "3d62feba4e5a39218dfd";
+/******/ 	var hotCurrentHash = "448ebd7a5823434cb032";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -788,10 +788,22 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire("./client/js/App.js")(__webpack_require__.s = "./client/js/App.js");
+/******/ 	return hotCreateRequire("./client/App.js")(__webpack_require__.s = "./client/App.js");
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./client/App.js":
+/*!***********************!*\
+  !*** ./client/App.js ***!
+  \***********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_modules_stock_StockController_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/modules/stock/StockController.js */ \"./client/js/modules/stock/StockController.js\");\n/* harmony import */ var _js_modules_stock_StockView_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/modules/stock/StockView.js */ \"./client/js/modules/stock/StockView.js\");\n/* harmony import */ var _js_modules_stock_StockModel_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/modules/stock/StockModel.js */ \"./client/js/modules/stock/StockModel.js\");\n/* harmony import */ var _js_services_StockService_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/services/StockService.js */ \"./client/js/services/StockService.js\");\n/* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./css/style.scss */ \"./client/css/style.scss\");\n/* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_css_style_scss__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\n\n\nconst model = new _js_modules_stock_StockModel_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\nconst view = new _js_modules_stock_StockView_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"](model);\nconst stockService = new _js_services_StockService_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"]();\nconst controller = new _js_modules_stock_StockController_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](model, view, stockService);\n\nconst startFillItemsButton = document.getElementById(\"start-fill-items-button\");\nstartFillItemsButton.addEventListener(\"click\", evt => {\n    const itemsNumber = parseFloat(document.getElementById(\"start-items-number\").value);\n    if (!isNaN(itemsNumber)) {\n        controller.fillItems(itemsNumber);\n    }\n});\n\n//# sourceURL=webpack:///./client/App.js?");
+
+/***/ }),
 
 /***/ "./client/css/style.scss":
 /*!*******************************!*\
@@ -801,18 +813,6 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// style-loader: Adds some css to the DOM by adding a <style> tag\n\n// load the styles\nvar content = __webpack_require__(/*! !../../node_modules/css-loader!../../node_modules/postcss-loader/src!../../node_modules/sass-loader/lib/loader.js!./style.scss */ \"./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js!./node_modules/sass-loader/lib/loader.js!./client/css/style.scss\");\nif(typeof content === 'string') content = [[module.i, content, '']];\n// Prepare cssTransformation\nvar transform;\n\nvar options = {}\noptions.transform = transform\n// add the styles to the DOM\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\nif(content.locals) module.exports = content.locals;\n// Hot Module Replacement\nif(true) {\n\t// When the styles change, update the <style> tags\n\tif(!content.locals) {\n\t\tmodule.hot.accept(/*! !../../node_modules/css-loader!../../node_modules/postcss-loader/src!../../node_modules/sass-loader/lib/loader.js!./style.scss */ \"./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js!./node_modules/sass-loader/lib/loader.js!./client/css/style.scss\", function() {\n\t\t\tvar newContent = __webpack_require__(/*! !../../node_modules/css-loader!../../node_modules/postcss-loader/src!../../node_modules/sass-loader/lib/loader.js!./style.scss */ \"./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js!./node_modules/sass-loader/lib/loader.js!./client/css/style.scss\");\n\t\t\tif(typeof newContent === 'string') newContent = [[module.i, newContent, '']];\n\t\t\tupdate(newContent);\n\t\t});\n\t}\n\t// When the module is disposed, remove the <style> tags\n\tmodule.hot.dispose(function() { update(); });\n}\n\n//# sourceURL=webpack:///./client/css/style.scss?");
-
-/***/ }),
-
-/***/ "./client/js/App.js":
-/*!**************************!*\
-  !*** ./client/js/App.js ***!
-  \**************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_stock_StockController_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/stock/StockController.js */ \"./client/js/modules/stock/StockController.js\");\n/* harmony import */ var _modules_stock_StockView_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/stock/StockView.js */ \"./client/js/modules/stock/StockView.js\");\n/* harmony import */ var _modules_stock_StockModel_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/stock/StockModel.js */ \"./client/js/modules/stock/StockModel.js\");\n/* harmony import */ var _services_StockService_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./services/StockService.js */ \"./client/js/services/StockService.js\");\n/* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../css/style.scss */ \"./client/css/style.scss\");\n/* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_css_style_scss__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\n\n\nconst model = new _modules_stock_StockModel_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\nconst view = new _modules_stock_StockView_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"](model);\nconst stockService = new _services_StockService_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"]();\nconst controller = new _modules_stock_StockController_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](model, view, stockService);\n\nconst startFillItemsButton = document.getElementById(\"start-fill-items-button\");\nstartFillItemsButton.addEventListener(\"click\", evt => {\n    const itemsNumber = parseFloat(document.getElementById(\"start-items-number\").value);\n    if (!isNaN(itemsNumber)) {\n        controller.fillItems(itemsNumber);\n    }\n});\n\n//# sourceURL=webpack:///./client/js/App.js?");
 
 /***/ }),
 
